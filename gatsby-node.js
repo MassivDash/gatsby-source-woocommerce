@@ -25,7 +25,7 @@ exports.sourceNodes = async (
   const fetchNodes = async (fieldName) => {
 
     let pag = `${fieldName}?per_page=${itemCount}`
-    if (itemCount === null || typeof itemCount !== 'undefined') {
+    if (itemCount === null || typeof itemCount === 'undefined') {
       pag = fieldName
     }
     const res = await WooCommerce.getAsync(pag);
