@@ -12,7 +12,7 @@ Source plugin for [Gatsby](https://www.gatsbyjs.org/). Pulls in data from protec
 // In gatsby-config.js
 plugins:[
   {       
-    resolve: "gatsby-source-woocommerce",
+    resolve: "@massivdash/gatsby-source-woocommerce",
     options: {
      // Base URL of Wordpress site
      
