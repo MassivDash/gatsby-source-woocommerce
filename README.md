@@ -17,7 +17,7 @@ plugins:[
      // Base URL of Wordpress site
      
       // This counts controls the API get with ?per_page=
-      // type number
+      // default: 10
       itemCount: 20,
 
       api: 'wordpress.domain',
