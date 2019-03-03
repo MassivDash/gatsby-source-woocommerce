@@ -1,0 +1,41 @@
+{
+  "_from": "gatsby-source-woocommerce@^0.2.0",
+  "_id": "gatsby-source-woocommerce@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-pyhmfMKZ93V6dGfcYHyWl2oaLR1YhXPdWqgwalrZEdaBuAhpJyar7zDN3akUm9jJZWywuMs5CwHQVwrynb2w0Q==",
+  "_location": "/gatsby-source-woocommerce",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "gatsby-source-woocommerce@^0.2.0",
+    "name": "gatsby-source-woocommerce",
+    "escapedName": "gatsby-source-woocommerce",
+    "rawSpec": "^0.2.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.2.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-source-woocommerce/-/gatsby-source-woocommerce-0.2.0.tgz",
+  "_shasum": "39daf9ff6defc1dfb7b913926baced9dde76c0a9",
+  "_spec": "gatsby-source-woocommerce@^0.2.0",
+  "_where": "D:\\git\\KawePaleGatsby\\KAWEPALEWORDPRESS",
+  "author": {
+    "name": "Marc Aaron Glasser"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "woocommerce-api": "^1.4.2"
+  },
+  "deprecated": false,
+  "description": "Gatsby source plugin for WooCommerce",
+  "license": "ISC",
+  "main": "gatsby-node.js",
+  "name": "gatsby-source-woocommerce",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.0"
+}
