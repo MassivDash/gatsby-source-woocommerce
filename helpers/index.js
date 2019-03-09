@@ -1,6 +1,7 @@
 const crypto = require("crypto");
+const colorized = require(`../output-color`);
 
-const processNode = (createNodeId, node, fieldName) => {
+const processNode = (createNodeId, node, fieldName, verbose) => {
   const nodeId = createNodeId(`woocommerce-${fieldName}-${node.id}`)
   const nodeContent = JSON.stringify(node);
   const nodeContentDigest = crypto
@@ -18,6 +19,26 @@ const processNode = (createNodeId, node, fieldName) => {
       contentDigest: nodeContentDigest,
     },
   })
+  if(verbose) {
+
+    if(fieldName === 'products'){
+      console.log(colorized.out(`
+       GATSBY NODE ID: ${nodeId}
+       IMPORTING PRODUCT: ${node.id}, ${node.name}
+       VARIATIONS: ${node.variations.length}
+        `, colorized.color.Font.FgMagenta));
+    }
+    else {
+      console.log(colorized.out(`
+       GATSBY NODE ID: ${nodeId}
+       NODE WOO RESPONSE: ${nodeContent}
+        `, colorized.color.Font.FgMagenta));
+    }
+    
+
+    
+  }
+  
   return nodeData
 };
 

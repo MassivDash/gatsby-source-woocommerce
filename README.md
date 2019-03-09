@@ -15,12 +15,16 @@ plugins:[
     resolve: "@massivdash/gatsby-source-woocommerce",
     options: {
      // Base URL of Wordpress site
+     api: 'wordpress.domain',
      
       // This counts controls the API get with ?per_page=
       // default: 10
       itemCount: 20,
 
-      api: 'wordpress.domain',
+      // set to true to see fetch output in console, during build 
+      // default: false
+      verbose: true,
+
       // true if using https. false if nah.
       https: false,
       api_keys: {
@@ -52,4 +56,6 @@ This is fork from https://registry.npmjs.org/gatsby-source-woocommerce/
 03.03. 2019
 Added support for page pagination via ?per_page= request for displaying more than 10 products in a single call. 
 
+09.03.2019
+Added verbose output to console for details while fetching nodes. 
 

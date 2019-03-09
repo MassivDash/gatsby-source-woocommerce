@@ -1,5 +1,6 @@
 const WooCommerceAPI = require('woocommerce-api');
 const { processNode } = require('./helpers');
+const colorized = require(`./output-color`);
 
 exports.sourceNodes = async (
   { boundActionCreators, createNodeId },
@@ -8,7 +9,7 @@ exports.sourceNodes = async (
   const { createNode } = boundActionCreators;
   delete configOptions.plugins;
 
-  const { api, https, api_keys, fields, itemCount } = configOptions;
+  const { api, https, api_keys, fields, itemCount, verbose } = configOptions;
 
   // set up WooCommerce node api tool
   const WooCommerce = new WooCommerceAPI({
@@ -34,9 +35,24 @@ exports.sourceNodes = async (
 
   // Loop over each field set in configOptions and process/create nodes
   async function fetchNodesAndCreate (array) {
+
     for (const field of array) {
       const nodes = await fetchNodes(field);
-      nodes.forEach(n=>createNode(processNode(createNodeId, n, field)));
+      if (verbose) {
+        console.log(colorized.out(`
+        ============== WOO FETCHING =====================================
+
+        ITEMS FOUND: ${nodes.length} FOR FIELD: ${field}
+
+
+        `, colorized.color.Font.FgMagenta));
+      }
+      nodes.forEach(n=>createNode(processNode(createNodeId, n, field, verbose)));
+      if (verbose) {
+        console.log(colorized.out(`
+        ============== WOO FETCHING ENDED ==============================
+        `, colorized.color.Font.FgMagenta));
+      }
     }
   }
   
