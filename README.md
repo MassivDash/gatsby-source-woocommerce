@@ -51,11 +51,20 @@ plugins:[
 
 This is fork from https://registry.npmjs.org/gatsby-source-woocommerce/ 
 
+
+
+![spaceghost](https://blog.spaceout.pl/content/images/2018/11/spaceghost-1.jpg)
+
 ### @SPACEGHOST
+https://spaceout.pl
+
 
 03.03. 2019
 Added support for page pagination via ?per_page= request for displaying more than 10 products in a single call. 
 
 09.03.2019
-Added verbose output to console for details while fetching nodes. 
+Added verbose output to console for details while fetching nodes.
+Updated packages
+
+
 
