@@ -4,7 +4,7 @@ Source plugin for [Gatsby](https://www.gatsbyjs.org/). Pulls in data from protec
 
 ## Install
 
-`npm install --save gatsby-source-woocommerce`
+`npm i --save @massivdash/gatsby-source-woocommerce `
 
 ## How to Use
 
